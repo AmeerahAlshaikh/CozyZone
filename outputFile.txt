@@ -1,0 +1,14 @@
+How are you feeling today ?
+( Depressed ,Sad ,Normal ,Pleasant ,Happy )? 
+i am feeling Sad
+
+How are you feeling today ?
+( Depressed ,Sad ,Normal ,Pleasant ,Happy )? 
+i am feeling Normal
+
+How are you feeling today ?
+( Depressed ,Sad ,Normal ,Pleasant ,Happy )? 
+i am feeling Happy
+
+Your previous moods are:
+Sad Normal Happy 

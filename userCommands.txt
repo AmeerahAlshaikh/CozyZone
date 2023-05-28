@@ -1,0 +1,8 @@
+addMood 
+Sad
+addMood
+Normal
+addMood
+Happy
+showMood
+QUIT
