@@ -1,23 +1,31 @@
 package cozyzone;
 
+import java.io.PrintWriter;
 import java.util.Date;
 
 class Diary {
-    private String DiaryName;
-    private Date DiaryDate;
+    private String DiaryTitle ;
+    private String DiaryDate;
     private String DiaryBody;
 
-    public Diary(String DiaryName, Date DiaryDate, String DiaryBody) {
-        this.DiaryName = DiaryName;
-        this.DiaryDate = DiaryDate;
-        this.DiaryBody = DiaryBody;
+   
+
+    public Diary(String DiaryTitle, String DiaryDate,String DiaryBody) {
+        this.DiaryTitle = DiaryTitle;
+        DiaryDate = DiaryDate; 
+         this.DiaryBody = DiaryBody;
     }
 
-    public String getDiaryName() {
-        return DiaryName;
+    
+
+    Diary() {
+      
+    }
+    public String getDiaryTitle() {
+        return DiaryTitle;
     }
 
-    public Date getDiaryDate() {
+    public String getDiaryDate() {
         return DiaryDate;
     }
 
@@ -25,16 +33,16 @@ class Diary {
         return DiaryBody;
     }
 
-    public void setDiaryName(String DiaryName) {
-        this.DiaryName = DiaryName;
+    public void setDiaryTitle(String DiaryTitle) {
+        this.DiaryTitle = DiaryTitle;
     }
 
-    public void setDiaryDate(Date DiaryDate) {
+    public void setDiaryDate(String DiaryDate) {
         this.DiaryDate = DiaryDate;
     }
 
     public void setDiaryBody(String DiaryBody) {
-        this.DiaryBody = DiaryBody;
+           this.DiaryBody = DiaryBody;
     }
     
     
