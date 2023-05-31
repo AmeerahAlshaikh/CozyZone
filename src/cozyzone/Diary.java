@@ -3,7 +3,7 @@ package cozyzone;
 import java.io.PrintWriter;
 import java.util.Date;
 
-class Diary {
+public class Diary {
     private String DiaryTitle ;
     private String DiaryDate;
     private String DiaryBody;
