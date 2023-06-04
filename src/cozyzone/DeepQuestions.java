@@ -44,7 +44,7 @@ public class DeepQuestions {
             System.out.println(questions[i]);
             System.out.println("Write your answer:");
             String answer = input.nextLine();
-            String answerp2= "";
+            String answerp2 = "";
             if (i == 0) {
                 if (answer.equalsIgnoreCase("bad")) {
                     System.out.println(
@@ -68,16 +68,25 @@ public class DeepQuestions {
                     answerp2 = input.nextLine();
                 } else if (answer.equalsIgnoreCase("else")) {
                     System.out.println("What do you feel exactly? ");
-                    answerp2 = input.nextLine();
+                    answer = input.nextLine();
                 } else {
-                    System.out.println("Sorry! enter the feeling again");
-                    answerp2 = input.nextLine();
+                    while (true) {
+                        System.out.println("Sorry! enter the feeling again");
+                        answer = input.nextLine();
+                        if (answer.equalsIgnoreCase("bad") || answer.equalsIgnoreCase("fearful")
+                                || answer.equalsIgnoreCase("angry") || answer.equalsIgnoreCase("disgusted")
+                                || answer.equalsIgnoreCase("sad") || answer.equalsIgnoreCase("else")) {
+                            break;
+                        }
+                    }
+
                 }
-                String finalanswer= answer+ " ,"+answerp2; 
-                System.out.println(finalanswer);
+                String finalanswer = answer + " ," + answerp2;
                 questions[i].setOpenEndedAnswer(finalanswer);
+            } else {
+                questions[i].setOpenEndedAnswer(answer);
             }
-            questions[i].setOpenEndedAnswer(answer);
+
         }
 
     }
@@ -90,15 +99,15 @@ public class DeepQuestions {
     public static void add2File(DeepQuestions[] questions, File deepQuestionsOutput, FileWriter myWriter) {
 
         for (int i = 0; i < questions.length; i++) {
-           try {
-            myWriter.write("Question: " + questions[i].getQuestionTitle()
+            try {
+                myWriter.write("Question: " + questions[i].getQuestionTitle()
                         + " \n Your answer: " + questions[i].getOpenEndedAnswer()
                         + "\n");
-        } catch (IOException e) {
-            e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
-        }
-            
+
     }
 
 }
